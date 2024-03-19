@@ -8,7 +8,7 @@ from testVirtual import send_message,open_whatsapp,close_driver
 
 
 scope=['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive']
-credentials=ServiceAccountCredentials.from_json_keyfile_name(r'static/api2.json',scope)
+credentials=ServiceAccountCredentials.from_json_keyfile_name('api2.json',scope)
 client=gspread.authorize(credentials)
 sheet_o=client.open("MichelesFriends").sheet1
 sheet=sheet_o.get_all_records()

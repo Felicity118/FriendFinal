@@ -29,11 +29,11 @@ def wait(by,search_value):
 
 def open_whatsapp():
     options = webdriver.ChromeOptions()
-    options.add_argument(r"--user-data-dir=myflaskapp\userData")
+    options.add_argument(r"--user-data-dir=root/userData")
     #options.add_argument("--headless")
     options.add_argument("--window-size=1920x1080")
     global driver
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path='chrome.exe',options=options)
     driver.get("https://web.whatsapp.com/")
 
 
